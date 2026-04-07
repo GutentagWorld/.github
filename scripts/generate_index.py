@@ -207,8 +207,8 @@ def generate_readme(existing: set[str]) -> str:
 
         lines.append(f'## {category}')
         lines.append('')
-        lines.append('| # | Repo | Language/Tool | Category | Status | Registry |')
-        lines.append('|---|------|---------------|----------|--------|----------|')
+        lines.append('| # | Repo | Status | Registry |')
+        lines.append('|---|------|--------|----------|')
 
         for name, display, cat, registry, install_cmd in entries:
             counter += 1
@@ -230,7 +230,7 @@ def generate_readme(existing: set[str]) -> str:
                 registry_cell = ''
 
             lines.append(
-                f'| {counter} | {repo_cell} | {display} | {cat} | {status_cell} | {registry_cell} |'
+                f'| {counter} | {repo_cell} | {status_cell} | {registry_cell} |'
             )
 
         lines.append('')
